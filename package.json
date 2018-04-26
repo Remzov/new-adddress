@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "webpack --progress --colors --watch",
-    "build": "webpack -p"
+    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "build": "WEBPACK_ENV=production webpack -p"
   },
   "dependencies": {
     "autoprefixer": "^8.2.0",

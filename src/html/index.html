@@ -21,22 +21,21 @@
                                 <div>
                                     <button class="header__callback" type="button">Обратная связь</button>
                                 </div>
-                                <div>
-                                    <span class="icon">
-                                        <img src="../img/phone.svg" alt="">
-                                    </span>
+                                <div class="header__contact-column">
+                                    <span class="header__contact-icon icon icon_phone"></span>
                                     <span class="header__tel"><span>(473) </span>240-90-33</span>
                                 </div>
-                                <div>
-                                    <span class="icon">
-                                        <img src="../img/mail.svg" alt="">
-                                    </span>
+                                <div class="header__contact-column">
+                                    <span class="header__contact-icon icon icon_mail"></span>
                                     <a class="header__email" href="mailto: nov_adress@mail.ru">nov_adress@mail.ru</a>
                                 </div>
                             </div>
                             <div class="header__upper-rightside">
                                 <div class="header__social">
-                                    <a href="#"></a>
+                                    <a class="header__social-link header__social-link_in" href="#"></a>
+                                    <a class="header__social-link header__social-link_fb" href="#"></a>
+                                    <a class="header__social-link header__social-link_od" href="#"></a>
+                                    <a class="header__social-link header__social-link_vk" href="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +81,9 @@
                                 <div class="search-form__row">
                                     <label class="search-form__label" for="#objects">Объекты</label>
                                     <select class="uk-select" name="objects" id="objects">
-                                        <option>Любые</option>
+                                        <option selected>Любые</option>
+                                        <option>Плохие</option>
+                                        <option>Хорошие</option>
                                     </select>
                                 </div>
                                 <div class="search-form__row">
@@ -103,7 +104,9 @@
                                 <div class="search-form__row">
                                     <label class="search-form__label" for="#district">Районы</label>
                                     <select class="uk-select" name="district" id="district">
-                                        <option>Любой</option>
+                                        <option selected>Любой</option>
+                                        <option>Левобережный</option>
+                                        <option>Шилово</option>
                                     </select>
                                 </div>
                             </div>
@@ -111,7 +114,9 @@
                                 <div class="search-form__row">
                                     <label class="search-form__label" for="#sort">Сортировать по</label>
                                     <select class="uk-select" name="sort" id="sort">
-                                        <option>Умолчанию</option>
+                                        <option selected>Умолчанию</option>
+                                        <option>По возрастанию</option>
+                                        <option>По убыванию</option>
                                     </select>
                                 </div>
                                 <div class="search-form__row">
@@ -259,7 +264,7 @@
                     </div>
                     <div class="landing__liders">
                         <h3 class="landing__liders-title">Лидеры продаж</h3>
-                        <div class="landing__liders-slider" uk-slideshow>
+                        <div class="landing__liders-slider" uk-slideshow="animation: fade">
                             <ul class="uk-slideshow-items">
                                 <li>
                                     <div class="lider-item">
@@ -412,14 +417,23 @@
                         </div>
                         <div class="landing__contacts-info">
                             <div class="landing__contacts-content">
-                                <div class="landing__contacts-address">
-                                    г. Воронеж, ул. Южно-Моравская, д. 15 б
+                                <div class="landing__contacts-row">
+                                    <span class="landing__contacts-icon icon icon_phone"></span>
+                                    <span class="landing__contacts-address">
+                                        г. Воронеж, ул. Южно-Моравская, д. 15 б
+                                    </span>
                                 </div>
-                                <div class="landing__contacts-tel">
-                                    (473) <span>240-90-33</span>
+                                <div class="landing__contacts-row">
+                                    <span class="landing__contacts-icon icon icon_phone"></span>
+                                    <span class="landing__contacts-tel">
+                                        <span>(473)</span> 240-90-33
+                                    </span>
                                 </div>
-                                <div class="landing__contacts-mail">
-                                    nov_adress@mail.ru
+                                <div class="landing__contacts-row">
+                                    <span class="landing__contacts-icon icon icon_mail"></span>
+                                    <span class="landing__contacts-mail">
+                                        nov_adress@mail.ru
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -427,20 +441,20 @@
                 </div>
             </section>
         </main>
-        <footer>
+        <footer class="footer">
             <div class="footer__upper">
                 <div class="uk-container">
                     <div class="footer__columns">
-                        <div>
-                            г. Воронеж, ул. Южно-Моравская, д. 15 б
-                            (473) 240-90-33
+                        <div class="footer__info">
+                            г. Воронеж, ул. Южно-Моравская, д. 15 б<br>
+                            <span>(473)</span> 240-90-33<br>
                             nov_adress@mail.ru
                         </div>
                         <div>
                             <div class="footer__mailing">
                                 <form class="footer__mailing-form">
-                                    <input class="footer__mailing-input" type="email" palceholder="Введите ваш e-mail" required>
-                                    <button class="footer__mailing-submit" type="submit">
+                                    <input class="footer__mailing-input" type="email" placeholder="Введите ваш e-mail" required>
+                                    <button class="footer__mailing-submit" type="submit">Подписаться на рассылку</button>
                                 </form>
                             </div>
                             <div class="footer__share">
@@ -454,8 +468,8 @@
             </div>
             <div class="footer__lower">
                 <div class="uk-container">
-                    <div class="footer__copyright">
-                        2018 ©  Новый адрес
+                    <div class="footer__owner">
+                        2018 ©  Новый адрес<br>
                         Агентство недвижимости
                     </div>
                 </div>

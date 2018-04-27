@@ -18,8 +18,8 @@
                     <div class="header__main">
                         <div class="header__upper">
                             <div class="header__upper-leftside">
-                                <div>
-                                    <button class="header__callback" type="button">Обратная связь</button>
+                                <div class="header__contact-column">
+                                    <button class="header__callback" type="button" data-uk-toggle="target: #callback">Обратная связь</button>
                                 </div>
                                 <div class="header__contact-column">
                                     <span class="header__contact-icon icon icon_phone"></span>
@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="header__contact-column">
                                     <span class="header__contact-icon icon icon_mail"></span>
-                                    <a class="header__email" href="mailto: nov_adress@mail.ru">nov_adress@mail.ru</a>
+                                    <a class="header__email" href="mailto:nov_adress@mail.ru">nov_adress@mail.ru</a>
                                 </div>
                             </div>
                             <div class="header__upper-rightside">
@@ -42,13 +42,13 @@
                         <div class="header__lower">
                             <nav class="header__nav">
                                 <a href="#">Главная</a>
-                                <a href="#">Поиск недвижимости</a>
-                                <a href="#">Свежие предложения</a>
-                                <a href="#">О компании</a>
-                                <a href="#">Работа</a>
-                                <a href="#">Партнеры</a>
-                                <a href="#">Новости</a>
-                                <a href="#">Контакты</a>
+                                <a href="#search">Поиск недвижимости</a>
+                                <a href="#offers">Свежие предложения</a>
+                                <a href="#about">О компании</a>
+                                <a href="#job">Работа</a>
+                                <a href="#partners">Партнеры</a>
+                                <a href="#news">Новости</a>
+                                <a href="#contacts">Контакты</a>
                             </nav>
                         </div>
                     </div>
@@ -69,18 +69,18 @@
                             8(952)106-68-78<br>
                             8(952)106-54-59
                         </div>
-                    <div>
+                    </div>
                 </div>
             </section>
-            <section class="landing__search">
+            <section class="landing__search" id="search">
                 <div class="uk-container">
                     <h2 class="landing__search-title section-title">Поиск недвижимости</h2>
                     <form class="search-form">
                         <div class="search-form__grid">
                             <div>
                                 <div class="search-form__row">
-                                    <label class="search-form__label" for="#objects">Объекты</label>
-                                    <select class="uk-select" name="objects" id="objects">
+                                    <label class="search-form__label" for="objects">Объекты</label>
+                                    <select class="uk-select" name="search_objects" id="objects">
                                         <option selected>Любые</option>
                                         <option>Плохие</option>
                                         <option>Хорошие</option>
@@ -89,21 +89,21 @@
                                 <div class="search-form__row">
                                     <div class="search-form__columns">
                                         <div>
-                                            <label class="search-form__label" for="#price-from">Цена от</label>
-                                            <input class="uk-input" type="text" name="price-from" id="price-from">
+                                            <label class="search-form__label" for="price-from">Цена от</label>
+                                            <input class="uk-input" type="text" name="search_price-from" id="price-from">
                                         </div>
-                                        <div class="search-form__dash">-</div>
+                                        <div class="search-form__dash"></div>
                                         <div>
-                                            <label class="search-form__label" for="#price-to">до руб.</label>
-                                            <input class="uk-input" type="text" name="price-to" id="price-to">
+                                            <label class="search-form__label" for="price-to">до руб.</label>
+                                            <input class="uk-input" type="text" name="search_price-to" id="price-to">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div class="search-form__row">
-                                    <label class="search-form__label" for="#district">Районы</label>
-                                    <select class="uk-select" name="district" id="district">
+                                    <label class="search-form__label" for="district">Район</label>
+                                    <select class="uk-select" name="search_district" id="district">
                                         <option selected>Любой</option>
                                         <option>Левобережный</option>
                                         <option>Шилово</option>
@@ -112,8 +112,8 @@
                             </div>
                             <div>
                                 <div class="search-form__row">
-                                    <label class="search-form__label" for="#sort">Сортировать по</label>
-                                    <select class="uk-select" name="sort" id="sort">
+                                    <label class="search-form__label" for="sort">Сортировать по</label>
+                                    <select class="uk-select" name="search_sort" id="sort">
                                         <option selected>Умолчанию</option>
                                         <option>По возрастанию</option>
                                         <option>По убыванию</option>
@@ -122,13 +122,13 @@
                                 <div class="search-form__row">
                                     <div class="search-form__columns">
                                         <div>
-                                            <label class="search-form__label" for="#square-from">Площадь от</label>
-                                            <input class="uk-input" type="text" name="square-from" id="square-from">
+                                            <label class="search-form__label" for="square-from">Площадь от</label>
+                                            <input class="uk-input" type="text" name="search_square-from" id="square-from">
                                         </div>
-                                        <div class="search-form__dash">-</div>
+                                        <div class="search-form__dash"></div>
                                         <div>
-                                            <label class="search-form__label" for="#square-to">до кв.м</label>
-                                            <input class="uk-input" type="text" name="square-to" id="square-to">
+                                            <label class="search-form__label" for="square-to">до кв.м</label>
+                                            <input class="uk-input" type="text" name="search_square-to" id="square-to">
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@
                     </form>
                 </div>
             </section>
-            <section class="landing__offers">
+            <section class="landing__offers" id="offers">
                 <div class="uk-container">
                     <h2 class="landing__offers-title section-title">Свежие предложения</h2>
                     <div class="landing__offers-grid">
@@ -150,7 +150,7 @@
                                 900 000 <span>руб.</span>
                             </div>
                             <div class="offer-item__square">
-                                44 <span>м2
+                                44 <span>м2</span>
                             </div>
                             <div class="offer-item__title">
                                 Название объекта может быть в несколько строк
@@ -167,7 +167,7 @@
                                 900 000 <span>руб.</span>
                             </div>
                             <div class="offer-item__square">
-                                44 <span>м2
+                                44 <span>м2</span>
                             </div>
                             <div class="offer-item__title">
                                 Название объекта может быть в несколько строк
@@ -247,7 +247,7 @@
                     </div>
                 </div>
             </section>
-            <section class="landing__about">
+            <section class="landing__about" id="about">
                 <div class="uk-container">
                     <h2 class="landing__about-title section-title">О компании</h2>
                     <div class="landing__about-text">
@@ -256,7 +256,7 @@
                     </div>
                 </div>
             </section>
-            <section class="landing__job">
+            <section class="landing__job" id="job">
                 <div class="uk-container">
                     <h2 class="landing__job-title section-title">Работа</h2>
                     <div class="landing__job-text">
@@ -264,83 +264,100 @@
                     </div>
                     <div class="landing__liders">
                         <h3 class="landing__liders-title">Лидеры продаж</h3>
-                        <div class="landing__liders-slider" uk-slideshow="animation: fade">
-                            <ul class="uk-slideshow-items">
-                                <li>
-                                    <div class="lider-item">
-                                        <div class="lider-item__image uk-cover-container">
-                                            <img class="uk-cover" src="../img/lider.jpg" alt="">
-                                        </div>
-                                        <div class="lider-item__desc">
-                                            <div class="lider-item__title">
-                                                Копылова Наталья Васильевна
+                        <div data-uk-slider>
+                            <div class="uk-slider-container uk-position-relative">
+                                <ul class="uk-slider-items">
+                                    <li>
+                                        <div class="lider-item">
+                                            <div class="lider-item__image uk-cover-container">
+                                                <img class="uk-cover" src="../img/lider.jpg" alt="">
                                             </div>
-                                            <div class="lider-item__position">
-                                                Эксперт по недвижимости
-                                            </div>
-                                            <div class="lider-item__text">
-                                                Текст описание  работы Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна. Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна. Текст описание  работы Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии .элементы дизайна. Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="lider-item">
-                                        <div class="lider-item__image uk-cover-container">
-                                            <img class="uk-cover" src="../img/lider.jpg" alt="">
-                                        </div>
-                                        <div class="lider-item__desc">
-                                            <div class="lider-item__title">
-                                                Копылова Наталья Васильевна №2
-                                            </div>
-                                            <div class="lider-item__position">
-                                                Эксперт по недвижимости
-                                            </div>
-                                            <div class="lider-item__text">
-                                                Текст описание  работы Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна. Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна. Текст описание  работы Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии .элементы дизайна. Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна.
+                                            <div class="lider-item__desc">
+                                                <div class="lider-item__title">
+                                                    Копылова Наталья Васильевна №2
+                                                </div>
+                                                <div class="lider-item__position">
+                                                    Эксперт по недвижимости
+                                                </div>
+                                                <div class="lider-item__text">
+                                                    Текст описание  работы Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна. Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна. Текст описание  работы Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии .элементы дизайна. Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна.
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a class="landing__liders-slider-prev" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-                            <a class="landing__liders-slider-next" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                                    </li>
+                                    <li>
+                                        <div class="lider-item">
+                                            <div class="lider-item__image uk-cover-container">
+                                                <img class="uk-cover" src="../img/lider.jpg" alt="">
+                                            </div>
+                                            <div class="lider-item__desc">
+                                                <div class="lider-item__title">
+                                                    Копылова Наталья Васильевна №3
+                                                </div>
+                                                <div class="lider-item__position">
+                                                    Эксперт по недвижимости
+                                                </div>
+                                                <div class="lider-item__text">
+                                                    Текст описание  работы Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна. Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна. Текст описание  работы Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии .элементы дизайна. Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии.элементы дизайна.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a class="landing__liders-slider-prev" href="#" data-uk-slidenav-previous data-uk-slider-item="previous"></a>
+                               <a class="landing__liders-slider-next" href="#"  data-uk-slidenav-next data-uk-slider-item="next"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="landing__partners" id="partners">
+                <div class="uk-container">
+                    <h2 class="landing__partners-title section-title">Партнеры</h2>
+                    <div class="landing__partners-slider uk-visible-toggle" data-uk-slider>
+                        <div class="uk-position-relative">
+                            <div class="uk-slider-container">
+                                <ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-grid">
+                                    <li>
+                                        <div class="landing__partners-item">
+                                            <img src="../img/partner-1.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="landing__partners-item">
+                                            <img src="../img/partner-2.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="landing__partners-item">
+                                            <img src="../img/partner-3.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="landing__partners-item">
+                                            <img src="../img/partner-4.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="landing__partners-item">
+                                            <img src="../img/partner-3.jpg" alt="">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="landing__partners-item">
+                                            <img src="../img/partner-4.jpg" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="uk-position-center-left-out" href="#" data-uk-slidenav-previous data-uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right-out" href="#" data-uk-slidenav-next data-uk-slider-item="next"></a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="landing__partners">
-                <div class="uk-container">
-                    <h2 class="landing__partners section-title">Партнеры</h2>
-                    <div class="landing__partners-slider uk-visible-toggle" uk-slider>
-                        <ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-4@s uk-grid">
-                            <li>
-                                <div class="landing__partners-item">
-                                    <img src="../img/partner-1.jpg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="landing__partners-item">
-                                    <img src="../img/partner-2.jpg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="landing__partners-item">
-                                    <img src="../img/partner-3.jpg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="landing__partners-item">
-                                    <img src="../img/partner-4.jpg" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="landing__partners-slider-prev" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                        <a class="landing__partners-slider-next" href="#" uk-slidenav-next uk-slider-item="next"></a>
-                    </div>
-                </div>
-            </section>
-            <section class="landing__news">
+            <section class="landing__news" id="news">
                 <div class="uk-container">
                     <h2 class="landing__news-title section-title">Новости</h2>
                     <div class="landing__news-grid">
@@ -348,7 +365,7 @@
                             <div class="news-item">
                                 <div class="news-item__image uk-cover-container">
                                     <a href="#">
-                                        <img src="../img/news.jpg" alt="" class="uk-cover">
+                                        <img class="uk-cover" src="../img/news.jpg" alt="" >
                                     </a>
                                 </div>
                                 <div class="news-item__caption">
@@ -363,7 +380,7 @@
                             <div class="news-item">
                                 <div class="news-item__image uk-cover-container">
                                     <a href="#">
-                                        <img src="../img/news.jpg" alt="" class="uk-cover">
+                                        <img class="uk-cover" src="../img/news.jpg" alt="" >
                                     </a>
                                 </div>
                                 <div class="news-item__caption">
@@ -378,7 +395,7 @@
                             <div class="news-item">
                                 <div class="news-item__image uk-cover-container">
                                     <a href="#">
-                                        <img src="../img/news.jpg" alt="" class="uk-cover">
+                                        <img class="uk-cover" src="../img/news.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="news-item__caption">
@@ -393,7 +410,7 @@
                             <div class="news-item">
                                 <div class="news-item__image uk-cover-container">
                                     <a href="#">
-                                        <img src="../img/news.jpg" alt="" class="uk-cover">
+                                        <img class="uk-cover" src="../img/news.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="news-item__caption">
@@ -408,7 +425,7 @@
                     <button class="landing__news-more" type="button">Смотреть все</button>
                 </div>
             </section>
-            <section class="landing__contacts">
+            <section class="landing__contacts" id="contacts">
                 <div class="uk-container">
                     <h2 class="landing__contacts-title section-title">Контакты</h2>
                     <div class="landing__contacts-columns">
@@ -450,11 +467,11 @@
                             <span>(473)</span> 240-90-33<br>
                             nov_adress@mail.ru
                         </div>
-                        <div>
+                        <div class="footer__social">
                             <div class="footer__mailing">
                                 <form class="footer__mailing-form">
                                     <input class="footer__mailing-input" type="email" placeholder="Введите ваш e-mail" required>
-                                    <button class="footer__mailing-submit" type="submit">Подписаться на рассылку</button>
+                                    <button class="footer__mailing-submit" type="submit">Подписаться <br>на рассылку</button>
                                 </form>
                             </div>
                             <div class="footer__share">
@@ -475,7 +492,31 @@
                 </div>
             </div>
         </footer>
+        <div class="callback-modal" id="callback" data-uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <button class="uk-modal-close-default" type="button" data-uk-close></button>
+                <div class="callback-modal__title">Обратная связь</div>
+                <form>
+                    <div class="callback-modal__row">
+                        <input class="uk-input" type="text" name="callback_name" placeholder="Имя:">
+                    </div>
+                    <div class="callback-modal__row">
+                        <input class="uk-input" type="email" name="callback_email" placeholder="E-mail:">
+                    </div>
+                    <div class="callback-modal__row">
+                        <input class="uk-input" type="tel" name="callback_tel" placeholder="Телефон*:" required>
+                    </div>
+                    <div class="callback-modal__row">
+                        <textarea class="uk-textarea" name="callback_message" placeholder="Сообщение:"></textarea>
+                    </div>
+                    <div class="callback-modal__tip">
+                        Поля, отмеченные *, обязательны для заполнения
+                    </div>
+                    <button class="callback-modal__submit" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script src="bundle.js"></script>
 </body>
 </html>

@@ -4,6 +4,9 @@
 
 .footer__upper {
     background-color: rgba(255,255,255,0.07);
+    @media (max-width: @breakpoint-medium) {
+        padding: 20px 0;
+    }
 }
 
 .footer__columns {
@@ -11,6 +14,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: @breakpoint-medium) {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
 }
 
 .footer__info {
@@ -19,11 +27,26 @@
     span {
         font-size: 12px;
     }
+    @media (max-width: @breakpoint-medium) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__social {
+    @media (max-width: @breakpoint-small) {
+        width: 100%;
+    }
 }
 
 .footer__mailing-form {
     display: flex;
     margin-bottom: 16px;
+    @media (max-width: @breakpoint-medium) {
+        margin-bottom: 30px;
+    }
+    @media (max-width: @breakpoint-small) {
+        flex-direction: column;
+    }
 }
 
 .footer__mailing-input {
@@ -31,6 +54,10 @@
     box-sizing: border-box;
     padding: 20px 0 20px 20px;
     border: 0;
+    @media (max-width: @breakpoint-small) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .footer__mailing-submit {
@@ -39,6 +66,7 @@
     padding: 11px;
     color: #ffffff;
     font-size: 15px;
+    font-weight: 700;
     line-height: 1.26;
     border: 0;
     background-color: #138cbe;
@@ -79,5 +107,6 @@
 
 .footer__owner {
     padding: 20px 0;
+    font-size: 14px;
     line-height: 1.35;
 }
